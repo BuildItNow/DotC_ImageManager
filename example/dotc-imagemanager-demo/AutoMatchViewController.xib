@@ -62,7 +62,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" id="fOW-j3-SQ5">
-                            <rect key="frame" x="145.99999947664213" y="346" width="164" height="133"/>
+                            <rect key="frame" x="146" y="346" width="164" height="133"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                             <string key="text">以256*256的参考尺寸拉取图片
 因为当前参考尺寸128*128不能满足，所以需要从服务器拉取图片，并且更新本地的参考尺寸为256*256</string>
@@ -70,7 +70,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="以128*128的参考尺寸拉取图片" textAlignment="natural" id="BbU-wp-rGS">
-                            <rect key="frame" x="145.99999947664213" y="0.0" width="164" height="128"/>
+                            <rect key="frame" x="146" y="0.0" width="164" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -96,7 +96,7 @@
                             </connections>
                         </button>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" id="wMC-oQ-lji">
-                            <rect key="frame" x="145.99999947664213" y="174" width="164" height="133"/>
+                            <rect key="frame" x="146" y="174" width="164" height="133"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                             <string key="text">以64*64的参考尺寸拉取图片
 因为当前有128*128的参考尺寸图片，能够满足64*64，所以直接使用128*128的图片，无需从服务器拉取</string>
@@ -104,7 +104,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IpL-Bs-kW8" customClass="DotCImageView">
-                            <rect key="frame" x="8" y="355" width="128" height="128"/>
+                            <rect key="frame" x="10" y="355" width="128" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
