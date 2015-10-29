@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F70B6611BC791400007A15D /* DotCImageDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B65A1BC791400007A15D /* DotCImageDatabase.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B6621BC791400007A15D /* DotCImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B65C1BC791400007A15D /* DotCImageManager.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B6631BC791400007A15D /* DotCLocalImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B65E1BC791400007A15D /* DotCLocalImageCache.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B6641BC791400007A15D /* DotCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B6601BC791400007A15D /* DotCImageView.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B66E1BC7980E0007A15D /* DotCDBLinkNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B6681BC7980E0007A15D /* DotCDBLinkNode.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B66F1BC7980E0007A15D /* DotCDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B66B1BC7980E0007A15D /* DotCDelegator.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B6701BC7980E0007A15D /* DotCDelegatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B66D1BC7980E0007A15D /* DotCDelegatorManager.m */; settings = {ASSET_TAGS = (); }; };
+		1F70B6781BC7C3D70007A15D /* DotCIntegrateAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F70B6771BC7C3D70007A15D /* DotCIntegrateAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A81A1BC8EFE00037854A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8101BC8EFE00037854A /* FMDatabase.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A81B1BC8EFE00037854A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8121BC8EFE00037854A /* FMDatabaseAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A81C1BC8EFE00037854A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8141BC8EFE00037854A /* FMDatabasePool.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A81D1BC8EFE00037854A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8161BC8EFE00037854A /* FMDatabaseQueue.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A81E1BC8EFE00037854A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8191BC8EFE00037854A /* FMResultSet.m */; settings = {ASSET_TAGS = (); }; };
+		1FD84C881BC8C1B600EF8951 /* DotCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD84C871BC8C1B600EF8951 /* DotCUtil.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F70B64B1BC790AF0007A15D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F70B64D1BC790AF0007A15D /* libdotc-imagemanager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libdotc-imagemanager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F70B6591BC791400007A15D /* DotCImageDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageDatabase.h; sourceTree = "<group>"; };
+		1F70B65A1BC791400007A15D /* DotCImageDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCImageDatabase.m; sourceTree = "<group>"; };
+		1F70B65B1BC791400007A15D /* DotCImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageManager.h; sourceTree = "<group>"; };
+		1F70B65C1BC791400007A15D /* DotCImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCImageManager.m; sourceTree = "<group>"; };
+		1F70B65D1BC791400007A15D /* DotCLocalImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCLocalImageCache.h; sourceTree = "<group>"; };
+		1F70B65E1BC791400007A15D /* DotCLocalImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCLocalImageCache.m; sourceTree = "<group>"; };
+		1F70B65F1BC791400007A15D /* DotCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageView.h; sourceTree = "<group>"; };
+		1F70B6601BC791400007A15D /* DotCImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCImageView.m; sourceTree = "<group>"; };
+		1F70B6671BC7980E0007A15D /* DotCDBLinkNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCDBLinkNode.h; sourceTree = "<group>"; };
+		1F70B6681BC7980E0007A15D /* DotCDBLinkNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCDBLinkNode.m; sourceTree = "<group>"; };
+		1F70B6691BC7980E0007A15D /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		1F70B66A1BC7980E0007A15D /* DotCDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCDelegator.h; sourceTree = "<group>"; };
+		1F70B66B1BC7980E0007A15D /* DotCDelegator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCDelegator.m; sourceTree = "<group>"; };
+		1F70B66C1BC7980E0007A15D /* DotCDelegatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCDelegatorManager.h; sourceTree = "<group>"; };
+		1F70B66D1BC7980E0007A15D /* DotCDelegatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCDelegatorManager.m; sourceTree = "<group>"; };
+		1F70B6741BC7B7930007A15D /* DotCIntegrateAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotCIntegrateAdapter.h; sourceTree = "<group>"; };
+		1F70B6771BC7C3D70007A15D /* DotCIntegrateAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCIntegrateAdapter.m; sourceTree = "<group>"; };
+		1F74A80F1BC8EFE00037854A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		1F74A8101BC8EFE00037854A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		1F74A8111BC8EFE00037854A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		1F74A8121BC8EFE00037854A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		1F74A8131BC8EFE00037854A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		1F74A8141BC8EFE00037854A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		1F74A8151BC8EFE00037854A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1F74A8161BC8EFE00037854A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		1F74A8171BC8EFE00037854A /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		1F74A8181BC8EFE00037854A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		1F74A8191BC8EFE00037854A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		1FD84C861BC8C1B600EF8951 /* DotCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCUtil.h; sourceTree = "<group>"; };
+		1FD84C871BC8C1B600EF8951 /* DotCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCUtil.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F70B64A1BC790AF0007A15D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F70B6441BC790AF0007A15D = {
+			isa = PBXGroup;
+			children = (
+				1F70B64F1BC790AF0007A15D /* dotc-imagemanager */,
+				1F70B64E1BC790AF0007A15D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F70B64E1BC790AF0007A15D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F70B64D1BC790AF0007A15D /* libdotc-imagemanager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F70B64F1BC790AF0007A15D /* dotc-imagemanager */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A80B1BC8EFE00037854A /* lib */,
+				1F70B6671BC7980E0007A15D /* DotCDBLinkNode.h */,
+				1F70B6681BC7980E0007A15D /* DotCDBLinkNode.m */,
+				1F70B6691BC7980E0007A15D /* Defines.h */,
+				1F70B66A1BC7980E0007A15D /* DotCDelegator.h */,
+				1F70B66B1BC7980E0007A15D /* DotCDelegator.m */,
+				1F70B66C1BC7980E0007A15D /* DotCDelegatorManager.h */,
+				1F70B66D1BC7980E0007A15D /* DotCDelegatorManager.m */,
+				1F70B6591BC791400007A15D /* DotCImageDatabase.h */,
+				1F70B65A1BC791400007A15D /* DotCImageDatabase.m */,
+				1F70B65B1BC791400007A15D /* DotCImageManager.h */,
+				1F70B65C1BC791400007A15D /* DotCImageManager.m */,
+				1F70B65D1BC791400007A15D /* DotCLocalImageCache.h */,
+				1F70B65E1BC791400007A15D /* DotCLocalImageCache.m */,
+				1F70B65F1BC791400007A15D /* DotCImageView.h */,
+				1F70B6601BC791400007A15D /* DotCImageView.m */,
+				1F70B6741BC7B7930007A15D /* DotCIntegrateAdapter.h */,
+				1F70B6771BC7C3D70007A15D /* DotCIntegrateAdapter.m */,
+				1FD84C861BC8C1B600EF8951 /* DotCUtil.h */,
+				1FD84C871BC8C1B600EF8951 /* DotCUtil.m */,
+			);
+			path = "dotc-imagemanager";
+			sourceTree = "<group>";
+		};
+		1F74A80B1BC8EFE00037854A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A80C1BC8EFE00037854A /* fmdb-2.3 */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1F74A80C1BC8EFE00037854A /* fmdb-2.3 */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A80D1BC8EFE00037854A /* src */,
+			);
+			path = "fmdb-2.3";
+			sourceTree = "<group>";
+		};
+		1F74A80D1BC8EFE00037854A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A80E1BC8EFE00037854A /* fmdb */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		1F74A80E1BC8EFE00037854A /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A80F1BC8EFE00037854A /* FMDatabase.h */,
+				1F74A8101BC8EFE00037854A /* FMDatabase.m */,
+				1F74A8111BC8EFE00037854A /* FMDatabaseAdditions.h */,
+				1F74A8121BC8EFE00037854A /* FMDatabaseAdditions.m */,
+				1F74A8131BC8EFE00037854A /* FMDatabasePool.h */,
+				1F74A8141BC8EFE00037854A /* FMDatabasePool.m */,
+				1F74A8151BC8EFE00037854A /* FMDatabaseQueue.h */,
+				1F74A8161BC8EFE00037854A /* FMDatabaseQueue.m */,
+				1F74A8171BC8EFE00037854A /* FMDB.h */,
+				1F74A8181BC8EFE00037854A /* FMResultSet.h */,
+				1F74A8191BC8EFE00037854A /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F70B64C1BC790AF0007A15D /* dotc-imagemanager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F70B6561BC790AF0007A15D /* Build configuration list for PBXNativeTarget "dotc-imagemanager" */;
+			buildPhases = (
+				1F70B6491BC790AF0007A15D /* Sources */,
+				1F70B64A1BC790AF0007A15D /* Frameworks */,
+				1F70B64B1BC790AF0007A15D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dotc-imagemanager";
+			productName = "dotc-imagemanager";
+			productReference = 1F70B64D1BC790AF0007A15D /* libdotc-imagemanager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F70B6451BC790AF0007A15D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Checker;
+				TargetAttributes = {
+					1F70B64C1BC790AF0007A15D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1F70B6481BC790AF0007A15D /* Build configuration list for PBXProject "dotc-imagemanager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F70B6441BC790AF0007A15D;
+			productRefGroup = 1F70B64E1BC790AF0007A15D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F70B64C1BC790AF0007A15D /* dotc-imagemanager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F70B6491BC790AF0007A15D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F70B6611BC791400007A15D /* DotCImageDatabase.m in Sources */,
+				1F74A81C1BC8EFE00037854A /* FMDatabasePool.m in Sources */,
+				1F74A81E1BC8EFE00037854A /* FMResultSet.m in Sources */,
+				1F70B6781BC7C3D70007A15D /* DotCIntegrateAdapter.m in Sources */,
+				1F70B6631BC791400007A15D /* DotCLocalImageCache.m in Sources */,
+				1F74A81D1BC8EFE00037854A /* FMDatabaseQueue.m in Sources */,
+				1F74A81A1BC8EFE00037854A /* FMDatabase.m in Sources */,
+				1F70B6641BC791400007A15D /* DotCImageView.m in Sources */,
+				1F70B66F1BC7980E0007A15D /* DotCDelegator.m in Sources */,
+				1F70B6701BC7980E0007A15D /* DotCDelegatorManager.m in Sources */,
+				1F74A81B1BC8EFE00037854A /* FMDatabaseAdditions.m in Sources */,
+				1F70B66E1BC7980E0007A15D /* DotCDBLinkNode.m in Sources */,
+				1F70B6621BC791400007A15D /* DotCImageManager.m in Sources */,
+				1FD84C881BC8C1B600EF8951 /* DotCUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1F70B6541BC790AF0007A15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1F70B6551BC790AF0007A15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F70B6571BC790AF0007A15D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1F70B6581BC790AF0007A15D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F70B6481BC790AF0007A15D /* Build configuration list for PBXProject "dotc-imagemanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F70B6541BC790AF0007A15D /* Debug */,
+				1F70B6551BC790AF0007A15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F70B6561BC790AF0007A15D /* Build configuration list for PBXNativeTarget "dotc-imagemanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F70B6571BC790AF0007A15D /* Debug */,
+				1F70B6581BC790AF0007A15D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F70B6451BC790AF0007A15D /* Project object */;
+}

@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F0FE1CF1BE066A100B27260 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0FE1CE1BE066A100B27260 /* placeholder.png */; settings = {ASSET_TAGS = (); }; };
+		1F74A7C41BC8E48F0037854A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A7C31BC8E48F0037854A /* main.m */; };
+		1F74A7C71BC8E48F0037854A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A7C61BC8E48F0037854A /* AppDelegate.m */; };
+		1F74A7CF1BC8E48F0037854A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F74A7CE1BC8E48F0037854A /* Assets.xcassets */; };
+		1F74A7D21BC8E48F0037854A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F74A7D01BC8E48F0037854A /* LaunchScreen.storyboard */; };
+		1F74A7DE1BC8EC6A0037854A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A7DC1BC8EC6A0037854A /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1F74A7DF1BC8EC6A0037854A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F74A7DD1BC8EC6A0037854A /* ViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		1F74A7E21BC8ED4C0037854A /* libdotc-imagemanager_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F74A7E01BC8ED4C0037854A /* libdotc-imagemanager_d.a */; };
+		1F74A7E31BC8ED4C0037854A /* libdotc-imagemanager_s.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F74A7E11BC8ED4C0037854A /* libdotc-imagemanager_s.a */; };
+		1F74A82E1BC8F0600037854A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F74A82D1BC8F0600037854A /* libsqlite3.0.tbd */; };
+		1F74A8311BC8F0E80037854A /* DotCImageManagerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A8301BC8F0E80037854A /* DotCImageManagerAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		1F8D41501BE1C0DD00441C4E /* AutoMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F8D414E1BE1C0DD00441C4E /* AutoMatchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1F8D41511BE1C0DD00441C4E /* AutoMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8D414F1BE1C0DD00441C4E /* AutoMatchViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		1F8D41531BE1F5B200441C4E /* wave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F8D41521BE1F5B200441C4E /* wave.jpg */; settings = {ASSET_TAGS = (); }; };
+		1FE249A61BDDF00A00D3A565 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE249A41BDDF00A00D3A565 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1FE249A71BDDF00A00D3A565 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE249A51BDDF00A00D3A565 /* ImageViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		1FE249AA1BDDF15900D3A565 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE249A91BDDF15900D3A565 /* DemoViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1FE249B01BDE28D600D3A565 /* AutoCollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE249AE1BDE28D600D3A565 /* AutoCollectViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1FE249B11BDE28D600D3A565 /* AutoCollectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE249AF1BDE28D600D3A565 /* AutoCollectViewController.xib */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F0FE1CE1BE066A100B27260 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		1F74A7BF1BC8E48F0037854A /* dotc-imagemanager-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dotc-imagemanager-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F74A7C31BC8E48F0037854A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F74A7C51BC8E48F0037854A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F74A7C61BC8E48F0037854A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F74A7CE1BC8E48F0037854A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F74A7D11BC8E48F0037854A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F74A7D31BC8E48F0037854A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F74A7DB1BC8EC6A0037854A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1F74A7DC1BC8EC6A0037854A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1F74A7DD1BC8EC6A0037854A /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		1F74A7E01BC8ED4C0037854A /* libdotc-imagemanager_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libdotc-imagemanager_d.a"; path = "dotc-imagemanager-demo/lib/dotc-imagemanager/lib/libdotc-imagemanager_d.a"; sourceTree = "<group>"; };
+		1F74A7E11BC8ED4C0037854A /* libdotc-imagemanager_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libdotc-imagemanager_s.a"; path = "dotc-imagemanager-demo/lib/dotc-imagemanager/lib/libdotc-imagemanager_s.a"; sourceTree = "<group>"; };
+		1F74A8251BC8F0350037854A /* DotCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageView.h; sourceTree = "<group>"; };
+		1F74A8291BC8F0350037854A /* libdotc-imagemanager_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdotc-imagemanager_d.a"; sourceTree = "<group>"; };
+		1F74A82A1BC8F0350037854A /* libdotc-imagemanager_s.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdotc-imagemanager_s.a"; sourceTree = "<group>"; };
+		1F74A82D1BC8F0600037854A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1F74A82F1BC8F0E80037854A /* DotCImageManagerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageManagerAdapter.h; sourceTree = "<group>"; };
+		1F74A8301BC8F0E80037854A /* DotCImageManagerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotCImageManagerAdapter.m; sourceTree = "<group>"; };
+		1F8D414D1BE1C0DD00441C4E /* AutoMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoMatchViewController.h; sourceTree = "<group>"; };
+		1F8D414E1BE1C0DD00441C4E /* AutoMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoMatchViewController.m; sourceTree = "<group>"; };
+		1F8D414F1BE1C0DD00441C4E /* AutoMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoMatchViewController.xib; sourceTree = "<group>"; };
+		1F8D41521BE1F5B200441C4E /* wave.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wave.jpg; sourceTree = "<group>"; };
+		1FE2499F1BDDEE8A00D3A565 /* DotCDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCDelegator.h; sourceTree = "<group>"; };
+		1FE249A01BDDEE8A00D3A565 /* DotCDelegatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCDelegatorManager.h; sourceTree = "<group>"; };
+		1FE249A11BDDEE8A00D3A565 /* DotCImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCImageManager.h; sourceTree = "<group>"; };
+		1FE249A21BDDEE8A00D3A565 /* DotCIntegrateAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotCIntegrateAdapter.h; sourceTree = "<group>"; };
+		1FE249A31BDDF00A00D3A565 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		1FE249A41BDDF00A00D3A565 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		1FE249A51BDDF00A00D3A565 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		1FE249A81BDDF15900D3A565 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		1FE249A91BDDF15900D3A565 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		1FE249AD1BDE28D600D3A565 /* AutoCollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCollectViewController.h; sourceTree = "<group>"; };
+		1FE249AE1BDE28D600D3A565 /* AutoCollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCollectViewController.m; sourceTree = "<group>"; };
+		1FE249AF1BDE28D600D3A565 /* AutoCollectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCollectViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F74A7BC1BC8E48F0037854A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F74A82E1BC8F0600037854A /* libsqlite3.0.tbd in Frameworks */,
+				1F74A7E21BC8ED4C0037854A /* libdotc-imagemanager_d.a in Frameworks */,
+				1F74A7E31BC8ED4C0037854A /* libdotc-imagemanager_s.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F0FE1CD1BE066A100B27260 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				1F8D41521BE1F5B200441C4E /* wave.jpg */,
+				1F0FE1CE1BE066A100B27260 /* placeholder.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		1F74A7B61BC8E48F0037854A = {
+			isa = PBXGroup;
+			children = (
+				1F74A82D1BC8F0600037854A /* libsqlite3.0.tbd */,
+				1F74A7E01BC8ED4C0037854A /* libdotc-imagemanager_d.a */,
+				1F74A7E11BC8ED4C0037854A /* libdotc-imagemanager_s.a */,
+				1F74A7C11BC8E48F0037854A /* dotc-imagemanager-demo */,
+				1F74A7C01BC8E48F0037854A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F74A7C01BC8E48F0037854A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A7BF1BC8E48F0037854A /* dotc-imagemanager-demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F74A7C11BC8E48F0037854A /* dotc-imagemanager-demo */ = {
+			isa = PBXGroup;
+			children = (
+				1F0FE1CD1BE066A100B27260 /* res */,
+				1F74A81F1BC8F0350037854A /* lib */,
+				1F74A7C51BC8E48F0037854A /* AppDelegate.h */,
+				1F74A7C61BC8E48F0037854A /* AppDelegate.m */,
+				1F74A7CE1BC8E48F0037854A /* Assets.xcassets */,
+				1F74A7D01BC8E48F0037854A /* LaunchScreen.storyboard */,
+				1F74A7D31BC8E48F0037854A /* Info.plist */,
+				1F74A7C21BC8E48F0037854A /* Supporting Files */,
+				1F74A7DB1BC8EC6A0037854A /* ViewController.h */,
+				1F74A7DC1BC8EC6A0037854A /* ViewController.m */,
+				1F74A7DD1BC8EC6A0037854A /* ViewController.xib */,
+				1F74A82F1BC8F0E80037854A /* DotCImageManagerAdapter.h */,
+				1F74A8301BC8F0E80037854A /* DotCImageManagerAdapter.m */,
+				1FE249A31BDDF00A00D3A565 /* ImageViewController.h */,
+				1FE249A41BDDF00A00D3A565 /* ImageViewController.m */,
+				1FE249A51BDDF00A00D3A565 /* ImageViewController.xib */,
+				1FE249A81BDDF15900D3A565 /* DemoViewController.h */,
+				1FE249A91BDDF15900D3A565 /* DemoViewController.m */,
+				1FE249AD1BDE28D600D3A565 /* AutoCollectViewController.h */,
+				1FE249AE1BDE28D600D3A565 /* AutoCollectViewController.m */,
+				1FE249AF1BDE28D600D3A565 /* AutoCollectViewController.xib */,
+				1F8D414D1BE1C0DD00441C4E /* AutoMatchViewController.h */,
+				1F8D414E1BE1C0DD00441C4E /* AutoMatchViewController.m */,
+				1F8D414F1BE1C0DD00441C4E /* AutoMatchViewController.xib */,
+			);
+			path = "dotc-imagemanager-demo";
+			sourceTree = "<group>";
+		};
+		1F74A7C21BC8E48F0037854A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A7C31BC8E48F0037854A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F74A81F1BC8F0350037854A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A8201BC8F0350037854A /* dotc-imagemanager */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		1F74A8201BC8F0350037854A /* dotc-imagemanager */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A8211BC8F0350037854A /* inc */,
+				1F74A8281BC8F0350037854A /* lib */,
+			);
+			path = "dotc-imagemanager";
+			sourceTree = "<group>";
+		};
+		1F74A8211BC8F0350037854A /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				1FE2499F1BDDEE8A00D3A565 /* DotCDelegator.h */,
+				1FE249A01BDDEE8A00D3A565 /* DotCDelegatorManager.h */,
+				1FE249A11BDDEE8A00D3A565 /* DotCImageManager.h */,
+				1FE249A21BDDEE8A00D3A565 /* DotCIntegrateAdapter.h */,
+				1F74A8251BC8F0350037854A /* DotCImageView.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		1F74A8281BC8F0350037854A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				1F74A8291BC8F0350037854A /* libdotc-imagemanager_d.a */,
+				1F74A82A1BC8F0350037854A /* libdotc-imagemanager_s.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F74A7BE1BC8E48F0037854A /* dotc-imagemanager-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F74A7D61BC8E48F0037854A /* Build configuration list for PBXNativeTarget "dotc-imagemanager-demo" */;
+			buildPhases = (
+				1F74A7BB1BC8E48F0037854A /* Sources */,
+				1F74A7BC1BC8E48F0037854A /* Frameworks */,
+				1F74A7BD1BC8E48F0037854A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dotc-imagemanager-demo";
+			productName = "dotc-imagemanager-demo";
+			productReference = 1F74A7BF1BC8E48F0037854A /* dotc-imagemanager-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F74A7B71BC8E48F0037854A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Checker;
+				TargetAttributes = {
+					1F74A7BE1BC8E48F0037854A = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 1F74A7BA1BC8E48F0037854A /* Build configuration list for PBXProject "dotc-imagemanager-demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F74A7B61BC8E48F0037854A;
+			productRefGroup = 1F74A7C01BC8E48F0037854A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F74A7BE1BC8E48F0037854A /* dotc-imagemanager-demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F74A7BD1BC8E48F0037854A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F74A7D21BC8E48F0037854A /* LaunchScreen.storyboard in Resources */,
+				1F0FE1CF1BE066A100B27260 /* placeholder.png in Resources */,
+				1F8D41531BE1F5B200441C4E /* wave.jpg in Resources */,
+				1F74A7CF1BC8E48F0037854A /* Assets.xcassets in Resources */,
+				1F8D41511BE1C0DD00441C4E /* AutoMatchViewController.xib in Resources */,
+				1FE249A71BDDF00A00D3A565 /* ImageViewController.xib in Resources */,
+				1FE249B11BDE28D600D3A565 /* AutoCollectViewController.xib in Resources */,
+				1F74A7DF1BC8EC6A0037854A /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F74A7BB1BC8E48F0037854A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE249A61BDDF00A00D3A565 /* ImageViewController.m in Sources */,
+				1F8D41501BE1C0DD00441C4E /* AutoMatchViewController.m in Sources */,
+				1F74A7DE1BC8EC6A0037854A /* ViewController.m in Sources */,
+				1F74A8311BC8F0E80037854A /* DotCImageManagerAdapter.m in Sources */,
+				1FE249AA1BDDF15900D3A565 /* DemoViewController.m in Sources */,
+				1F74A7C71BC8E48F0037854A /* AppDelegate.m in Sources */,
+				1F74A7C41BC8E48F0037854A /* main.m in Sources */,
+				1FE249B01BDE28D600D3A565 /* AutoCollectViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F74A7D01BC8E48F0037854A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F74A7D11BC8E48F0037854A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F74A7D41BC8E48F0037854A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1F74A7D51BC8E48F0037854A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F74A7D71BC8E48F0037854A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = ./lib;
+				INFOPLIST_FILE = "dotc-imagemanager-demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dotc-imagemanager-demo/lib/dotc-imagemanager/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotc.imagemanager.demo.dotc-imagemanager-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F74A7D81BC8E48F0037854A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				HEADER_SEARCH_PATHS = ./lib;
+				INFOPLIST_FILE = "dotc-imagemanager-demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dotc-imagemanager-demo/lib/dotc-imagemanager/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dotc.imagemanager.demo.dotc-imagemanager-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F74A7BA1BC8E48F0037854A /* Build configuration list for PBXProject "dotc-imagemanager-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F74A7D41BC8E48F0037854A /* Debug */,
+				1F74A7D51BC8E48F0037854A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F74A7D61BC8E48F0037854A /* Build configuration list for PBXNativeTarget "dotc-imagemanager-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F74A7D71BC8E48F0037854A /* Debug */,
+				1F74A7D81BC8E48F0037854A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F74A7B71BC8E48F0037854A /* Project object */;
+}
