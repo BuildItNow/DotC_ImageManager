@@ -44,7 +44,7 @@ DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAd
 ``` objectc
 - (void) retrieveImage:(NSString*)key delegatorID:(NSString*)delegatorID width:(float)w height:(float)h;
 ```
-   根据key获取w*h的图片，delegatorID为回调ID，当图片获取成功或者失败时Delegator被调用。
+   根据key和参考尺寸w*h获取图片，delegatorID为回调ID，当图片获取成功或者失败时Delegator被调用。
 ``` objectc
 - (void) clearLocalCache;
 ```
@@ -73,4 +73,30 @@ DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAd
 ```
    获取集成适配器实例。
 
+## DotCImageView
+从UIImageView继承，提供针对DotCImageManager的UI类，方便加载图片，提供PlaceHolder功能。<br/>
 
+``` objectc
+-(void)load:(NSString *)image;
+```
+   以imageView自身尺寸*screenScale作为参考尺寸，加载image图片。在加载图片时使用默认的placeHolder。
+``` objectc
+-(void)load:(NSString *)image placeHolder:(NSString *)placeHolder;
+```
+   以imageView自身尺寸*screenScale作为参考尺寸，加载image图片。在加载图片时使用指定的placeHolder。
+``` objectc
+-(void)load:(NSString *)image width:(float) w height:(float)h;
+```
+   以w*h为参考尺寸加载image图片。使用默认的placeHolder。
+``` objectc
+-(void)load:(NSString *)image width:(float) w height:(float)h placeHolder:(NSString *)placeHolder;
+```
+   以w*h为参考尺寸加载image图片。使用指定的placeHolder。
+``` objectc
+-(void)loadOriginal:(NSString *)image;
+```
+   加载原始图片。使用默认的placeHolder。
+``` objectc
+-(void)loadOriginal:(NSString *)image placeHolder:(NSString *)placeHolder;
+```
+   加载原始图片。使用指定的placeHolder。
