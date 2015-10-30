@@ -62,18 +62,20 @@ static NSString* TABLE_VERSION = @"version";
     }
     
     path = [path stringByAppendingPathComponent:IMAGE_DATABASE_NAME];
+    NSLog(@"[%@] DB path [%@]", LIB_TAG, path);
+    
     FMDatabase* db = [FMDatabase databaseWithPath:path];
     
     if(!db)
     {
-        NSLog(@"Create ImageDatabase Fail");
+        NSLog(@"[%@] Create DB Fail", LIB_TAG);
         
         goto OPERATION_FAIL;
     }
     
     if (![db open])
     {
-        NSLog(@"Open ImageDatabase Fail");
+        NSLog(@"[%@] Open DB Fail", LIB_TAG);
         
         goto OPERATION_FAIL;
     }
@@ -104,7 +106,7 @@ static NSString* TABLE_VERSION = @"version";
             
             [_db executeUpdate:[NSString stringWithFormat:@"DROP TABLE %@", TABLE_IMAGES]];
             
-            NSLog(@"IMAGE_DATABASE_VERSION is incorrect, clean all old datas");
+            NSLog(@"[%@] IMAGE_DATABASE_VERSION is incorrect, clean all old datas", LIB_TAG);
         }
     }
     
@@ -112,7 +114,7 @@ static NSString* TABLE_VERSION = @"version";
     
     if ([_db hadError])
     {
-        NSLog(@"Create Table Error %d: %@", [_db lastErrorCode], [_db lastErrorMessage]);
+        NSLog(@"[%@] Create Table Error %d: %@", LIB_TAG, [_db lastErrorCode], [_db lastErrorMessage]);
         
         goto OPERATION_FAIL;
     }
@@ -166,7 +168,7 @@ OPERATION_FAIL:
         
         if(![_db executeUpdate:update])
         {
-            NSLog(@"\nFMDatabase Fail %d\nDesc %@", _db.lastErrorCode, _db.lastErrorMessage);
+            NSLog(@"[%@] DB Fail %d\nDesc %@", LIB_TAG, _db.lastErrorCode, _db.lastErrorMessage);
         }
     }
     else
@@ -205,7 +207,7 @@ OPERATION_FAIL:
     ret = other ? [_db executeUpdate:insert, data, other] : [_db executeUpdate:insert, data];
     if(!ret)
     {
-        NSLog(@"\nFMDatabase Fail %d\nDesc %@", _db.lastErrorCode, _db.lastErrorMessage);
+        NSLog(@"[%@] DB Fail %d\nDesc %@",LIB_TAG, _db.lastErrorCode, _db.lastErrorMessage);
     }
     
     return ret ? 0 : -1;
@@ -216,7 +218,7 @@ OPERATION_FAIL:
     int time = [[NSDate date] timeIntervalSince1970] - daysAgo*24*60*60;
     NSString* del = [NSString stringWithFormat:@"DELETE FROM %@ WHERE lastUpdateTime<=%d", TABLE_IMAGES, time];
     
-    NSLog(@"Clear ImageDataBase Before %.2f days", daysAgo);
+    NSLog(@"[%@] Clear DB Before %.2f days", LIB_TAG, daysAgo);
     
     [_db executeUpdate:del];
 }

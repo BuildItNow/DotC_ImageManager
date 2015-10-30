@@ -268,7 +268,7 @@ typedef struct
         
         if([_database save:key imageData:data other:[NSData dataWithBytesNoCopy:other length:sizeof(SImageCacheOther_1_0)]] != 0)
         {
-            NSLog(@"Save Image %@ Fail", key);
+            NSLog(@"[%@] Save Image %@ fail", LIB_TAG, key);
             
             return FALSE;
         }
@@ -453,7 +453,8 @@ typedef struct
             {
                 [requesting addDelegatorID:delegatorID];
                 
-                NSLog(@"\nImage %@ \nDelegator %@\nRequesting %d,%d,%x matchers %d,%d,%x \n",
+                NSLog(@"[%@] \nImage %@ \nDelegator %@\nRequesting %d,%d,%x matches %d,%d,%x \n",
+                     LIB_TAG,
                      key,
                      delegatorID,
                      (int)requesting.psize.width, (int)requesting.psize.height, requesting.pflags, (int)psize.width, (int)psize.height, pflags
@@ -534,7 +535,8 @@ typedef struct
                 [dataFromCache.node linkAfter:_localCache.cacheItemList];
             }
             
-            NSLog(@"\nImage %@ \nDelegator:%@\nCache %d,%d,%x matches %d,%d,%x \nUse:%@",
+            NSLog(@"[%@] \nImage %@ \nDelegator:%@\nCache %d,%d,%x matches %d,%d,%x \nUse:%@",
+                 LIB_TAG,
                  key,
                  delegatorID,
                  (int)csize.width, (int)csize.height, cflags, (int)psize.width, (int)psize.height, pflags,
@@ -579,7 +581,7 @@ typedef struct
         
     }
     
-    NSLog(@"\nImage %@\nRequest from server", key);
+    NSLog(@"[%@] \nImage %@\nRequest from server", LIB_TAG, key);
 }
     
 - (void) onReceivedImageData:(NSData*)imageData info:(void*)info
@@ -664,7 +666,7 @@ typedef struct
             
             if([_database save:item.key imageData:imageData other:[NSData dataWithBytesNoCopy:other length:sizeof(SImageCacheOther_1_0)]] != 0)
             {
-                NSLog(@"Save Image %@ Fail", item.key);
+                NSLog(@"[%@] Save image %@ fail", LIB_TAG, item.key);
             }
             
             // Update old information

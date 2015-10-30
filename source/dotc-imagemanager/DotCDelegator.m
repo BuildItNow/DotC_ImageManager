@@ -208,7 +208,7 @@ static NSString* objectToString(id subject)
 {
     if(![DotCDelegator checkDelegatorValidity:_subject selector:_selector])
     {
-        NSLog(@"Delegator %@ selector signature is error. See DelegatorManager description.", [self delegatorID]);
+        NSLog(@"[%@] Delegator %@ selector signature is error. See DelegatorManager description.", LIB_TAG, [self delegatorID]);
         
         return nil;
     }

@@ -17,4 +17,7 @@
 // Count the static c array
 #define COUNT_OF(array) (sizeof(array)/sizeof(array[0]))
 
+// Log tag
+#define LIB_TAG @"DOTC_IMAGEMANAGER"
+
 #define BIT(n) (1<<(n))

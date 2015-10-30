@@ -226,7 +226,7 @@
     [item updateTime];
     [item.node linkAfter:_cacheItemList];
     
-    NSLog(@"Image Memory Cost : %dK", (int)(_cacheLength/1024.0f));
+    NSLog(@"[%@] Memory Cost : %dK", LIB_TAG, (int)(_cacheLength/1024.0f));
     
     [self tryCollectMemory];
     
@@ -265,7 +265,7 @@
                            
                            self->_tryCollecting = false;
                            
-                           NSLog(@"Collect Memory %.3fK", (oldMemory-self.cacheLength)/1024.0f);
+                           NSLog(@"[%@] Collect Memory %.3fK", LIB_TAG, (oldMemory-self.cacheLength)/1024.0f);
                        }
                        );
     }
@@ -286,7 +286,7 @@
         node = prev;
     }
 
-    NSLog(@"Clean LocalImageCache %.3fK", (oldMemory-self.cacheLength)/1024.0f);
+    NSLog(@"[%@] Clean memory cache %.3fK", LIB_TAG, (oldMemory-self.cacheLength)/1024.0f);
 }
 
 @end

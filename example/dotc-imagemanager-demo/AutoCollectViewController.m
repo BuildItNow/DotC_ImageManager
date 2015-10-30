@@ -16,6 +16,7 @@
     NSArray*               _imageNames;
     NSMutableArray*        _imageViews;
     int                    _curImage;
+    int                    _curName;
     bool                   _appearing;
 }
 @property (retain, nonatomic) IBOutlet UITextField *tfMaxSize;
@@ -31,7 +32,7 @@
     
     _imageNames = [@[@"t0.jpg", @"t1.jpg", @"t2.jpg", @"t3.jpg", @"d0.jpg", @"d1.jpg"] retain];
     int i = 1;
-    int n = 12;
+    int n = 4;
     _imageViews = [[NSMutableArray arrayWithCapacity:n] retain];
     for(; i<=n; ++i)
     {
@@ -41,6 +42,7 @@
     _tfMaxSize.text = [NSString stringWithFormat:@"%.3f", [[DotCImageManagerAdapter instance] getMaxMemoryCacheSize]/1024.0f];
     
     _curImage = 0;
+    _curName  = 0;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -74,7 +76,9 @@
 
 - (void) loadImage
 {
-    NSString* imageName = _imageNames[(rand()%(_imageNames.count))];
+    NSString* imageName = _imageNames[_curName];
+    ++_curName;
+    _curName %= (_imageNames.count);
     [_imageViews[_curImage] load:imageName];
     
     ++_curImage;
