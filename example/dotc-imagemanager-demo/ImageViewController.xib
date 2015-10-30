@@ -59,7 +59,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MmZ-xz-tXA" customClass="DotCImageView">
-                    <rect key="frame" x="221" y="265" width="79.999999016150838" height="160"/>
+                    <rect key="frame" x="220.99999901615084" y="265" width="80" height="160"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="DotCImageManager里面，采用类似游戏的资源管理策略，相同ID的图片资源在内存里面只有一份(也就是只有一个UIImage实例)" textAlignment="natural" id="THq-YQ-c08">

@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  dotc-imagemanager-demo
 //
-//  Created by Checker on 15/10/10.
-//  Copyright © 2015年 Checker. All rights reserved.
+//  Created by Yang G on 15/10/10.
+//  Copyright © 2015年 .C . All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -25,8 +25,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // Setup integrate adapter
     [DotCImageManager setIntegrateAdapter:[DotCImageManagerAdapter instance]];
-    DotCImageManager* dotcImageManager = DOTC_IMAGE_MANAGER;
+    
+    // Initialize DotCImageManager, DotCImageManager is singleton instance
+    DOTC_IMAGE_MANAGER;
     
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     

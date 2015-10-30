@@ -216,7 +216,7 @@ OPERATION_FAIL:
     int time = [[NSDate date] timeIntervalSince1970] - daysAgo*24*60*60;
     NSString* del = [NSString stringWithFormat:@"DELETE FROM %@ WHERE lastUpdateTime<=%d", TABLE_IMAGES, time];
     
-    //NSLog(@"Clear ImageDataBase Before %.2f days", daysAgo);
+    NSLog(@"Clear ImageDataBase Before %.2f days", daysAgo);
     
     [_db executeUpdate:del];
 }
