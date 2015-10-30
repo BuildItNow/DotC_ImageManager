@@ -33,10 +33,11 @@ DotCImageManager是一个高性能的图片缓存库，采用游戏开发中的�
 * 使用DotCImageView加载图片，或者直接通过DOTC_IMAGE_MANAGER获取图片
 
 # 文档
-DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAdapter,DotCDelegatorManager,DotCDelegator;Delegator部分也是一个可独立使用的库，主要解决应用开发人员对IOS Observer模式结合内存管理时容易出现内存泄露问题。
+DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAdapter;DotCDelegatorManager,DotCDelegator,DotCDelegatorArguments;Delegator部分也是一个可独立使用的库，提供DotCImageManager获取图片的异步回调策略。
 
 ## DotCImanageManager 
 图片缓存核心类，提供对外的请求接口和对缓存的操作接口。通过DOTC_IMAGE_MANAGER获取本类的Singleton实例。<br/>
+<br/>
 ``` objectc
 - (void) retrieveImage:(NSString*)key delegatorID:(NSString*)delegatorID;
 ```
@@ -75,7 +76,7 @@ DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAd
 
 ## DotCImageView
 从UIImageView继承，提供针对DotCImageManager的UI类，方便加载图片，提供PlaceHolder功能。<br/>
-
+<br/>
 ``` objectc
 -(void)load:(NSString *)image;
 ```
@@ -100,3 +101,202 @@ DotC_ImageManager中主要包含DotCImanageManager,DotCImageView,DotCIntegrateAd
 -(void)loadOriginal:(NSString *)image placeHolder:(NSString *)placeHolder;
 ```
    加载原始图片。使用指定的placeHolder。
+   
+# DotCIntegrateAdapter
+集成适配器，DotCImageManager需要主体项目提供一些必要功能才能正常工作<br/>
+<br/>
+
+``` objectc
+- (void) request:(NSString*)image width:(int)w height:(int)h info:(void*)info;
+```
+   DotCImageManager需要请求图片时会调用该接口。<br/>
+   image : 图片ID<br/>
+   w     : 参考尺寸宽度<br/>
+   h     : 参考尺寸高度<br/>
+   info  : 请求额外信息，在调用onRequest:info中需要
+``` objectc
+- (UIImage*)  getPlaceHolder:(NSString*)name;
+```
+   DotCImageView在使用placeHolder时会调用该接口获取图片。<br/>
+``` objectc
+- (NSString*) getDatabasePath;
+```
+   DotCImageManager使用的数据库路径。<br/>
+
+``` objectc
+- (int) getMaxMemoryCacheSize;
+```
+   DotCImageManager使用的最大内存缓存大小。<br/>
+``` objectc
+- (void) onRequest:(NSData*)imageData info:(void*)info;
+```
+   当request:width:height:info请求图片成功后者失败后，必须通过调用该接口回调通知DotCImageManager。<br/>
+   
+# DotCDelegatorManager
+从DotCImageManager获取图片是异步方式，因此需要一个回调Delegator机制。<br/>
+<br/>
+``` objectc
+- (DotCDelegatorID) addDelegator:(id) subject selector:(SEL) selector;
+```
+   注册Delegator，返回唯一的DelegatorID。<br/>
+   注意：selector只能有DotCDelegatorArguments类型的唯一参数；可以有返回值<br/>
+``` objectc
+- (DotCDelegatorID) addDelegator:(id) subject selector:(SEL) selector weakUserData:(id)userData;
+```
+   注册Delegator，返回唯一的DelegatorID。Delegator将携带userData，在arguments里通过DELEGATOR_ARGUMENT_USERDATA获取userData。<br/>
+   注意：Delegator对userData是弱引用。也就是Delegator不会对userData进行retain。<br/>
+``` objectc
+- (DotCDelegatorID) addDelegator:(id) subject selector:(SEL) selector strongUserData:(id)userData;
+```
+   注册Delegator，返回唯一的DelegatorID。Delegator将携带userData。<br/>
+   注意：Delegator对userData是强引用。也就是Delegator会对userData进行retain，在Delegator释放时候对userData进行release。<br/>
+``` objectc
+- (void) removeDelegators:(id) subject;
+```
+   移除subject上包含的所有delegator。
+``` objectc
+- (void) removeDelegator:(DotCDelegatorID) delegatorID;
+```
+   移除delegatorID对应的delegator。
+``` objectc
+- (id) performDelegator:(DotCDelegatorID) delegatorID arguments:(DotCDelegatorArguments*) arguments;
+```
+   以arguments为参数调用delegatorID对应的delegator，返回该delegator执行的结果。
+``` objectc
++ (instancetype) globalDelegatorManager;
+```
+   获取全局的DelegatorManager，全局DelegatorManager作为Singleton存在，可通过DOTC_GLOBAL_DELEGATOR_MANAGER宏获取。<br/>
+   
+   针对DelegatorManager会保存subject对象指针，当subject释放后，必须清理DelegatorManager里面所有对应的Delegators，否则将可能因为野指针而Crash。为此，提供了几个宏来自动进行这个过程。
+``` objectc
+#define DOTC_GLOBAL_DELEGATOR_MANAGER [DotCDelegatorManager globalDelegatorManager]
+
+// Support auto remove delegators for class want to use global delegator manager
+#define DOTC_DECL_DELEGATOR_FEATURE_CLASS(clsName, superClsName)\
+@interface clsName : superClsName\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector;\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector weakData:(id)data;\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector strongData:(id)data;\
+@end
+
+#define DOTC_IMPL_DELEGATOR_FEATURE_CLASS(clsName, superClsName)\
+@implementation clsName\
+- (void) dealloc\
+{\
+[DOTC_GLOBAL_DELEGATOR_MANAGER removeDelegators:self];\
+[super dealloc];\
+}\
+\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector\
+{\
+return [DOTC_GLOBAL_DELEGATOR_MANAGER addDelegator:self selector:selector];\
+}\
+\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector weakData:(id)data\
+{\
+return [DOTC_GLOBAL_DELEGATOR_MANAGER addDelegator:self selector:selector weakUserData:data];\
+}\
+\
+- (DotCDelegatorID) genDelegatorID:(SEL)selector strongData:(id)data\
+{\
+return [DOTC_GLOBAL_DELEGATOR_MANAGER addDelegator:self selector:selector strongUserData:data];\
+}\
+@end
+```
+   针对subject类做类似编码，这样保证在subject的dealloc里面remove所有相关的delegators:
+``` objectc
+// .h
+DOTC_DECL_DELEGATOR_FEATURE_CLASS(__DotCImageView, UIImageView)
+@interface DotCImageView : __DotCImageView
+...
+
+// .m
+DOTC_IMPL_DELEGATOR_FEATURE_CLASS(__DotCImageView, UIImageView)
+...
+```
+
+# DotCDelegatorArguments
+Delegator回调参数。<br/>
+<br/>
+``` objectc
+- (void) setArgument:(id) argument for:(NSString*) name;
+```
+   添加name对应的参数argument。
+``` objectc
+- (void) cleanArgument:(NSString*) name;
+```
+   清除name对应的参数。
+``` objectc
+- (id)   getArgument:(NSString*) name;
+```   
+   获取name对应的参数。
+   
+# 示例
+## DotCImageManager
+### 使用DotCImageView
+1. xib里，对应的UIImageView修改为DotCImageView。<br/>
+2. 对DotCImageView实例调用load方法。
+
+### 使用DOTC_IMAGE_MANAGER
+``` objectc
+...
+// Retrieve image from manager
+[DOTC_IMAGE_MANAGER retrieveImage:image delegatorID:[self genDelegatorID:@selector(onReceivedImageData:)]];
+...
+
+// The defination of delegator
+- (void) onReceivedImageData:(DotCDelegatorArguments*)arguments
+{
+    // Get the image name
+    NSString* key  = [arguments getArgument:IMAGE_ARGUMENT_KEY];
+    // Get the image
+    Image* image = [arguments getArgument:IMAGE_ARGUMENT_IMAGE];
+    // Get the error
+    id     error = [arguments getArgument:IMAGE_ARGUMENT_ERROR];
+    ...
+}
+```
+
+## DotCDelegatorManager
+### 直接使用DOTC_GLOBAL_DELEGATOR_MANAGER
+注册
+``` objectc
+[DOTC_GLOBAL_DELEGATOR_MANAGER addDelegator:self selector:selector];
+```
+回调
+``` objectc
+DotCDelegatorArguments* arguments = WEAK_OBJECT(DotCDelegatorArguments, init);
+                       
+if(image)
+{
+   [arguments setArgument:image for:IMAGE_ARGUMENT_IMAGE];
+}
+                       
+[arguments setArgument:key for:IMAGE_ARGUMENT_KEY];
+                       
+if(error)
+{
+   [arguments setArgument:error for:IMAGE_ARGUMENT_ERROR];
+}
+                       
+[DOTC_GLOBAL_DELEGATOR_MANAGER performDelegator:delegatorID arguments:arguments];
+
+```
+### 使用DOTC_DECL_DELEGATOR_FEATURE_CLASS，DOTC_IMPL_DELEGATOR_FEATURE_CLASS
+定义具有Delegator Feature的类
+``` objectc
+// .h
+DOTC_DECL_DELEGATOR_FEATURE_CLASS(__DotCImageView, UIImageView)
+@interface DotCImageView : __DotCImageView
+...
+
+// .m
+DOTC_IMPL_DELEGATOR_FEATURE_CLASS(__DotCImageView, UIImageView)
+...
+```
+注册
+``` objectc
+[self genDelegatorID:@selector(onReceivedImageData:)
+```
+回调<br/>
+与直接使用类似
