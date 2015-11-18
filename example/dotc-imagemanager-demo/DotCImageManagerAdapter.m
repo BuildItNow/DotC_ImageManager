@@ -72,9 +72,9 @@
 
 - (void) request:(NSString*)image width:(int)w height:(int)h info:(void*)info
 {
+    __block DotCImageManagerAdapter* weakSelf = self;
     if([image isEqual:@"test"])
     {
-        __block DotCImageManagerAdapter* weakSelf = self;
         dispatch_async(dispatch_get_main_queue(),
         ^{
             UIGraphicsBeginImageContext(CGSizeMake(w, h));
@@ -88,23 +88,32 @@
         return ;
     }
     
-    NSArray* urls =
-    @[
-        @"http://www.bit-now.com/BINImages/d0.jpg",
-        @"http://www.bit-now.com/BINImages/d1.jpg",
-        @"http://www.bit-now.com/BINImages/d2.jpg",
-        @"http://www.bit-now.com/BINImages/t0.jpg",
-        @"http://www.bit-now.com/BINImages/t1.jpg",
-        @"http://www.bit-now.com/BINImages/t2.jpg",
-        @"http://www.bit-now.com/BINImages/t3.jpg"
-    ];
+    NSDictionary* id2names =
+    @{
+        @"t0.jpg" : @"春-0.jpg",
+        @"t1.jpg" : @"春-1.jpg",
+        @"t2.jpg" : @"春-2.jpg",
+        @"t3.jpg" : @"春-3.jpg",
+        @"d0.jpg" : @"春-4.jpg",
+        @"d1.jpg" : @"春-5.jpg",
+        @"d2.jpg" : @"春-6.jpg",
+    };
     
+    image = [id2names objectForKey:image];
+    if(!image)
+    {
+        dispatch_async(dispatch_get_main_queue(),
+        ^{
+            [weakSelf onRequest:nil info:info];
+        });
+        
+        return ;
+    }
     
-    NSString* url = [NSString stringWithFormat:@"http://www.bit-now.com/BINImages/%@", image];//urls[rand()%urls.count];
-    NSURL* nsUrl = [NSURL URLWithString:url];
-    NSURLRequest * request = [NSURLRequest requestWithURL:nsUrl cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0f]; //maximal timeout is 30s
+    NSString* url = [NSString stringWithFormat:@"http://101.200.215.114/res/img/%@", image];
+    url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0f];
  
-    __block DotCImageManagerAdapter* weakSelf = self;
     
     [NSURLConnection sendAsynchronousRequest:request queue:_connQueue completionHandler: ^(NSURLResponse *resp, NSData * data, NSError * error)
     {
